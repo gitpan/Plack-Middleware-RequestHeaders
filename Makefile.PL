@@ -7,7 +7,7 @@ use inc::Module::Install 1.06;
 name 'Plack-Middleware-RequestHeaders';
 abstract "modify\ HTTP\ request\ headers";
 author "Wallace\ Reis\ \<wreis\@cpan\.org\>";
-version "0\.03";
+version "0\.031";
 license "perl";
 
 # configure requires => configure_requires

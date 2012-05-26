@@ -24,4 +24,4 @@ requires:
   warnings: 0
 resources:
   repository: git://github.com/wreis/Plack-Middleware-RequestHeaders.git
-version: 0.03
+version: 0.031

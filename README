@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Plack-Middleware-RequestHeaders,
-version 0.03:
+version 0.031:
 
   modify HTTP request headers
 

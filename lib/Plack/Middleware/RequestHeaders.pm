@@ -1,6 +1,6 @@
 package Plack::Middleware::RequestHeaders;
 {
-  $Plack::Middleware::RequestHeaders::VERSION = '0.03';
+  $Plack::Middleware::RequestHeaders::VERSION = '0.031';
 }
 # ABSTRACT: modify HTTP request headers
 
@@ -44,7 +44,7 @@ Plack::Middleware::RequestHeaders - modify HTTP request headers
 
 =head1 VERSION
 
-version 0.03
+version 0.031
 
 =head1 SYNOPSIS
 
