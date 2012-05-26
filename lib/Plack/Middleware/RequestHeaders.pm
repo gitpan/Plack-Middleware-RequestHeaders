@@ -1,18 +1,20 @@
 package Plack::Middleware::RequestHeaders;
+{
+  $Plack::Middleware::RequestHeaders::VERSION = '0.03';
+}
+# ABSTRACT: modify HTTP request headers
 
 use strict;
 use warnings;
 use Plack::Util ();
-
-our $VERSION = '0.02';
+use Plack::Util::Accessor qw/set unset/;
 
 use parent 'Plack::Middleware';
 
-__PACKAGE__->mk_accessors(qw/set unset/);
-
 sub build_req_header_key {
   my ( $self, $key ) = @_;
-  return join(q{_}, q{HTTP}, split(/\-/, uc $key));
+  my $hname = join(q{_}, split(/\-/, uc $key));
+  return $hname =~ m{CONTENT\_(LENGTH|TYPE)} ? $hname : q{HTTP_} . $hname;
 }
 
 sub call {
@@ -32,11 +34,17 @@ sub call {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 Plack::Middleware::RequestHeaders - modify HTTP request headers
+
+=head1 VERSION
+
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -44,9 +52,12 @@ Plack::Middleware::RequestHeaders - modify HTTP request headers
         set => ['Accept-Encoding' => 'identity'],
         unset => ['Authorization'];
 
-=head1 AUTHOR
+=head1 DESCRIPTION
 
-Wallace Reis C<< <wreis@cpan.org> >>
+This middleware allows the modification of HTTP request headers. For instance,
+util for use with L<Plack::App::Proxy>.
+
+=head1 ACKNOWLEDGMENT
 
 Initial development sponsored by 123people Internetservices GmbH - L<http://www.123people.com/>
 
@@ -54,4 +65,19 @@ Initial development sponsored by 123people Internetservices GmbH - L<http://www.
 
 L<Plack::Middleware::Header>, L<Plack::Middleware>,  L<Plack::Builder>
 
+=head1 AUTHOR
+
+Wallace Reis <wreis@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Wallace Reis.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
+
+__END__
+
