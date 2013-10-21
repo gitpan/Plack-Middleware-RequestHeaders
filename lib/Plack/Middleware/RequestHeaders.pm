@@ -1,8 +1,7 @@
 package Plack::Middleware::RequestHeaders;
-{
-  $Plack::Middleware::RequestHeaders::VERSION = '0.031';
-}
 # ABSTRACT: modify HTTP request headers
+
+our $VERSION = '0.04'; # VERSION
 
 use strict;
 use warnings;
@@ -34,7 +33,7 @@ sub call {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -44,7 +43,7 @@ Plack::Middleware::RequestHeaders - modify HTTP request headers
 
 =head1 VERSION
 
-version 0.031
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -71,13 +70,9 @@ Wallace Reis <wreis@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Wallace Reis.
+This software is copyright (c) 2013 by Wallace Reis.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
