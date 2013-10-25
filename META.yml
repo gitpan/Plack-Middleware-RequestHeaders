@@ -23,4 +23,4 @@ resources:
   bugtracker: https://github.com/wreis/Plack-Middleware-RequestHeaders/issues
   homepage: https://github.com/wreis/Plack-Middleware-RequestHeaders
   repository: git://github.com/wreis/Plack-Middleware-RequestHeaders.git
-version: 0.04
+version: 0.05

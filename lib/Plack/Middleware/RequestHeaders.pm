@@ -1,7 +1,7 @@
 package Plack::Middleware::RequestHeaders;
 # ABSTRACT: modify HTTP request headers
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 use strict;
 use warnings;
@@ -43,7 +43,7 @@ Plack::Middleware::RequestHeaders - modify HTTP request headers
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -62,7 +62,7 @@ Initial development sponsored by 123people Internetservices GmbH - L<http://www.
 
 =head1 SEE ALSO
 
-L<Plack::Middleware::Header>, L<Plack::Middleware>,  L<Plack::Builder>
+L<Plack::Middleware::Headers>, L<Plack::Middleware>,  L<Plack::Builder>
 
 =head1 AUTHOR
 

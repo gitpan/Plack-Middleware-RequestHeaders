@@ -2,7 +2,7 @@ NAME
     Plack::Middleware::RequestHeaders - modify HTTP request headers
 
 VERSION
-    version 0.04
+    version 0.05
 
 SYNOPSIS
         enable 'RequestHeaders',
@@ -18,7 +18,7 @@ ACKNOWLEDGMENT
     <http://www.123people.com/>
 
 SEE ALSO
-    Plack::Middleware::Header, Plack::Middleware, Plack::Builder
+    Plack::Middleware::Headers, Plack::Middleware, Plack::Builder
 
 AUTHOR
     Wallace Reis <wreis@cpan.org>

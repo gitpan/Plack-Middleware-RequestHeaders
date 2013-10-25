@@ -51,6 +51,6 @@
          "web" : "https://github.com/wreis/Plack-Middleware-RequestHeaders"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 
